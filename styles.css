@@ -55,9 +55,10 @@ footer {
 .youtube { background: #FF0000; }
 
 .link-boxes {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  justify-content: space-between;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 .box .link_name {
@@ -101,7 +102,7 @@ footer {
   }
 
   .link-boxes {
-    grid-template-columns: repeat(2, 1fr);
+    flex-direction: column;
   }
 
   .bottom-details {
