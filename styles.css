@@ -1,1 +1,117 @@
-/* your code here */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+footer {
+  width: 100%;
+  background: #000;
+  color: #fff;
+}
+
+.content {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 30px 40px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.logo_name {
+  font-size: 44px;
+  font-weight: 400;
+}
+
+.media-icons {
+  display: flex;
+  gap: 14px;
+}
+
+.media-icons a {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.facebook { background: #4267B2; }
+.twitter { background: #1DA1F2; }
+.instagram { background: #E1306C; }
+.linkedin { background: #0077B5; }
+.youtube { background: #FF0000; }
+
+.link-boxes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.box .link_name {
+  font-size: 24px;
+  margin-bottom: 12px;
+  position: relative;
+  display: inline-block;
+}
+
+.box .link_name::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 45px;
+  height: 2px;
+  background: #fff;
+}
+
+.box a {
+  display: block;
+  text-decoration: none;
+  color: #bdbdbd;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.bottom-details {
+  background: #2d313c;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #cfcfcf;
+}
+
+@media (max-width: 900px) {
+  .top {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .link-boxes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bottom-details {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .link-boxes {
+    grid-template-columns: 1fr;
+  }
+}
